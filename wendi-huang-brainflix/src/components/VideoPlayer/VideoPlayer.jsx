@@ -5,7 +5,7 @@ import './VideoPlayer.scss';
 function VideoPlayer({ video }) {
     return (
         <section className="video-player">
-            <video className="video-player__video" controls poster={video.poster}>
+            <video className="video-player__video" controls poster={video.image}>
             <source src={video.video} type="video/mp4" />
             </video>
             <h1 className="video-player__title">{video.title}</h1>

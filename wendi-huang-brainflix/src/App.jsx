@@ -11,7 +11,7 @@ function App() { /* This line defines a function called App, which is the main c
   console.log("Current Video:", currentVideo); 
 
   const handleVideoSelect = (videoId) => {
-    const selectedVideo = videoData.find(video => video.id ===  videoID);
+    const selectedVideo = videoData.find(video => video.id ===  videoId);
     setCurrentVideo(selectedVideo);
   };
 
@@ -21,7 +21,8 @@ function App() { /* This line defines a function called App, which is the main c
       <div className='app__main'>
         <VideoPlayer video={currentVideo} />
         <Comments comment={currentVideo.comments || []} />
-        <VideoList videos={videoData} currentVideo={currentVideo.id} onVideoSelect={handleVideoSelect} />
+        <VideoList  videos={videoData.filter(video => video.id !== currentVideo.id)}
+                onVideoSelect={handleVideoSelect} />
       </div>
 
     </div>

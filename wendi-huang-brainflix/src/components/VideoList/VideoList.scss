@@ -1,0 +1,22 @@
+.video-list {
+    &__title {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+  
+    &__item {
+      display: flex;
+      margin-bottom: 1rem;
+      cursor: pointer;
+    }
+  
+    &__thumbnail {
+      width: 100px;
+      height: auto;
+    }
+  
+    &__info {
+      margin-left: 1rem;
+    }
+  }
+  
