@@ -1,35 +1,31 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from 'react';
+import './App.css';
+import videoData from './assets/Data/video-details.json';
+import Header from './components/Header/Header';
+import VideoList from './components/VideoList/VideoList';
+import VideoPlayer from './components/VideoPlayer/VideoPlayer';
+import Comments from './components/Comments/Comments';
 
-function App() {
-  const [count, setCount] = useState(0)
+function App() { /* This line defines a function called App, which is the main component of the application. Components are like building blocks for your app.*/
+  const [currentVideo, setCurrentVideo] = useState(videoData[0] || {});
+  console.log("Current Video:", currentVideo); 
+
+  const handleVideoSelect = (videoId) => {
+    const selectedVideo = videoData.find(video => video.id ===  videoID);
+    setCurrentVideo(selectedVideo);
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className='app'>
+      <Header />
+      <div className='app__main'>
+        <VideoPlayer video={currentVideo} />
+        <Comments comment={currentVideo.comments || []} />
+        <VideoList videos={videoData} currentVideo={currentVideo.id} onVideoSelect={handleVideoSelect} />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+
+    </div>
   )
 }
 
-export default App
+export default App;
