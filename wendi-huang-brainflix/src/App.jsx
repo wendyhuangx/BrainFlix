@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './App.css';
+import './App.scss';
 import videoData from './assets/Data/video-details.json';
 import Header from './components/Header/Header';
 import VideoList from './components/VideoList/VideoList';
@@ -20,7 +20,7 @@ function App() { /* This line defines a function called App, which is the main c
       <Header />
       <div className='app__main'>
         <VideoPlayer video={currentVideo} />
-        <Comments comment={currentVideo.comments || []} />
+        <Comments comments={currentVideo.comments || []} />
         <VideoList  videos={videoData.filter(video => video.id !== currentVideo.id)}
                 onVideoSelect={handleVideoSelect} />
       </div>

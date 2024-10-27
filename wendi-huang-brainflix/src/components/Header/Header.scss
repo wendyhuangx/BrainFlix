@@ -1,27 +1,69 @@
 .header {
-    display: flex;
-    align-items: center;
+    display: block;
     padding: 1rem;
+    text-align: center;
   
     &__logo {
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #333;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 1rem;
+        width: 35%;
     }
-  
+    &__search-container{
+        position: relative;
+        margin: 0 auto;
+        display: flex;
+        overflow: hidden;
+        align-items: center;
+
+    }
+    &__search-icon{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-75%);
+        pointer-events: none;
+        left: 10px; 
+        width: 4%;
+        height: auto;
+    }
     &__search {
-      flex: 1;
-      margin: 0 1rem;
-      padding: 0.5rem;
-      font-size: 1rem;
+        width: 100%;
+        flex: 1;
+        background-color:#FAFAFA;
+        padding: 1rem 1rem 1rem 3rem;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        border-radius: 0.5rem;
+        box-sizing: border-box;
+    }
+    &__profile-image{
+        border-radius: 50%;
+        width: 10%;
+        height: 4rem;
+        margin-left: 2rem;
+        margin-bottom: 1rem;
+        
     }
   
     &__upload {
-      background-color: #0055ff;
-      color: white;
-      padding: 0.5rem 1rem;
-      border: none;
-      cursor: pointer;
+        display:flex;
+        align-items: center;
+        background-color: #0095ff;
+        width: 100%;
+        color: white;
+        padding: 1rem 1rem;
+        border: none;
+        cursor: pointer;
+    }
+    &__upload-icon{
+        width: 5%;
+        height: auto;
+    }
+    &__upload-text{
+        flex-grow: 1;
+        font-size: 1.2rem;
+        text-align: center;
     }
 }
   
