@@ -5,6 +5,7 @@ import Header from './components/Header/Header';
 import VideoList from './components/VideoList/VideoList';
 import VideoPlayer from './components/VideoPlayer/VideoPlayer';
 import Comments from './components/Comments/Comments';
+import Description from './components/Description/Description';
 
 function App() { /* This line defines a function called App, which is the main component of the application. Components are like building blocks for your app.*/
   const [currentVideo, setCurrentVideo] = useState(videoData[0] || {});
@@ -19,13 +20,20 @@ function App() { /* This line defines a function called App, which is the main c
     <div className='app'>
       <Header />
       <div className='app__container'>
-        <div className='app__main'>
+        <div className='app__video'>
           <VideoPlayer video={currentVideo} />
-          <Comments comments={currentVideo.comments || []} />
         </div>
+
+        <div className='app__content-section'>
+          <div className='app__video-description'>
+            <Description video={currentVideo} />
+            <Comments comments={currentVideo.comments || []} />
+          </div>
+        
         <div className='app__main-right'>
           <VideoList  videos={videoData.filter(video => video.id !== currentVideo.id)}
                 onVideoSelect={handleVideoSelect} />
+        </div>
         </div>
       </div>
 
