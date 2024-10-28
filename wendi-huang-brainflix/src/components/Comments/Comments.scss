@@ -35,6 +35,9 @@
         flex-direction: column;
 
     }
+    &__comment-form-header{
+        text-align: left;
+    }
     &__comment-headline{
         display: flex;
         flex-direction: row;
@@ -56,6 +59,7 @@
     }
     &__comments__timestamp{
       opacity: 50%;
+      color: grey;
     }
     &__comments__name{
       font-weight: bold;
@@ -123,6 +127,7 @@ form{
 form label{
     color: rgba(50, 50, 50, 0.5);
     text-align: left;
+    justify-content: left;
 
 }
 form input, form textarea{
