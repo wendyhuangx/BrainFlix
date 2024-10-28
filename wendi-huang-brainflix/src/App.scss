@@ -22,6 +22,11 @@ body{
 
 .app{
   padding-top: 1rem;
+  @media (min-width:768px){
+    &__video-description{
+      padding: 0 1rem;
+    }
+  }
   @media (min-width:1280px){
     padding: 0 5rem;
     &__container{

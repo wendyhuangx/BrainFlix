@@ -26,5 +26,11 @@
       text-align: left;
       color: #AFAFAF;
     }
+    @media (min-width:768px){
+      &__item{
+        margin-bottom: 1rem;
+        width: 50%;
+      }
+    }
   }
   
