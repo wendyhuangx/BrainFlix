@@ -1,14 +1,16 @@
 .header {
-    display: block;
-    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
     text-align: center;
+    align-items: center;
   
     &__logo {
         font-size: 1.5rem;
         font-weight: bold;
         color: #333;
         margin-bottom: 1rem;
-        width: 35%;
+        width: 45%;
     }
     &__search-container{
         position: relative;
@@ -17,6 +19,7 @@
         overflow: hidden;
         align-items: center;
 
+
     }
     &__search-icon{
         position: absolute;
@@ -24,25 +27,26 @@
         transform: translateY(-75%);
         pointer-events: none;
         left: 10px; 
-        width: 4%;
+        width: 8%;
         height: auto;
     }
     &__search {
         width: 100%;
         flex: 1;
         background-color:#FAFAFA;
-        padding: 1rem 1rem 1rem 3rem;
-        font-size: 1.2rem;
+        padding: 1rem 1rem 1rem 2.5rem;
+        font-size: 1rem;
         margin-bottom: 1rem;
         border-radius: 0.5rem;
         box-sizing: border-box;
     }
     &__profile-image{
         border-radius: 50%;
-        width: 10%;
-        height: 4rem;
-        margin-left: 2rem;
+        width: 18%;
+        height: 3.5rem;
+        margin-left: 1rem;
         margin-bottom: 1rem;
+        align-self: flex-start;
         
     }
   
@@ -52,18 +56,65 @@
         background-color: #0095ff;
         width: 100%;
         color: white;
-        padding: 1rem 1rem;
+        padding: 0.5rem 1rem;
         border: none;
         cursor: pointer;
     }
     &__upload-icon{
-        width: 5%;
+        width: 10%;
         height: auto;
     }
     &__upload-text{
         flex-grow: 1;
         font-size: 1.2rem;
         text-align: center;
+    }
+
+    @media (min-width: 768px){
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 2rem;
+        gap:1.5rem;
+
+        &__logo-container{
+            margin-bottom: 0;
+            margin-right: auto;
+        }
+        &__search-container{
+            margin: 0;
+            flex-grow: 1;
+            max-width: none;
+        }
+        &__profile-image{
+            width: 20%;
+            order: 3;
+        
+        }
+        &__upload{
+            margin-left: auto;
+            width: 25%;
+            padding: 1rem;
+        }
+        &__upload-icon{
+            width: 20%;
+            height: auto;
+        }
+        &__search{
+            width: 100%;
+        }
+        &__logo{
+            width: 30%;
+        }
+        &__profile-container{
+            margin-left: auto;
+        }
+    }
+
+
+    @media (min-width:1280px){
+
     }
 }
   

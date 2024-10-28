@@ -1,7 +1,9 @@
 .comments {
+    padding: 0 1rem;
     &__title {
       font-size: 1.2rem;
       margin-bottom: 1rem;
+      text-align: left;
     }
   
     &__input, &__submit {
@@ -15,5 +17,103 @@
     &__item {
       margin-bottom: 1rem;
     }
+    &__comment-icon{
+        width: 10%;
+        height: auto;
+    }
+    &__comment-text{
+        flex-grow: 1;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    &__item{
+        display: flex;
+        gap: 1rem;
+    }
+    &__comment-container{
+        display: flex;
+        flex-direction: column;
+
+    }
+    &__comment-headline{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    &__text{
+        text-align: left;
+    }
+    &__comment-fields-profile{
+        object-fit: cover;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+    }
+    &__divider{
+        border: none;
+        border-top: 1px solid #ccc; 
+        margin: 0.5rem 0; 
+    }
+    &__comments__timestamp{
+      opacity: 50%;
+    }
+    &__comments__name{
+      font-weight: bold;
+    }
   }
-  
+form{
+    display: flex;
+    flex-direction: column;
+    padding-top: 1em;
+    gap: 1rem;
+    padding-bottom: 1rem;
+}
+form label{
+    color: rgba(50, 50, 50, 0.5);
+    text-align: left;
+
+}
+form input, form textarea{
+    padding: 0.5em;
+    border: 1px solid rgba(50,50,50,0.5);
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    color: black;
+    border-radius: 0.5rem;
+    height: 5rem;
+
+}
+form button{
+    background-color: #0095ff;
+    color: white;
+    font-size: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    width:100%;
+    display:flex;
+    align-items: center;
+    cursor: pointer;
+}
+.input__container{
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    width: 100%;
+}
+.comment-profile{
+    flex: 0 0 20%;
+    display: flex;
+}
+.profile-image{
+    border-radius: 50%;
+    object-fit: cover;
+    width: 40px;
+    height:40px;
+}
+.comment-fields{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    gap:0.5rem;
+}
