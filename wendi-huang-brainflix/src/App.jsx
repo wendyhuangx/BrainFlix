@@ -29,6 +29,7 @@ function App() { /* This line defines a function called App, which is the main c
             <Description video={currentVideo} />
             <Comments comments={currentVideo.comments || []} />
           </div>
+          <hr></hr>
         
         <div className='app__main-right'>
           <VideoList  videos={videoData.filter(video => video.id !== currentVideo.id)}

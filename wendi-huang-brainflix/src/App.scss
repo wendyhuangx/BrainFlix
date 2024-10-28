@@ -16,9 +16,7 @@ body{
   transition: filter 300ms;
 }
 
-.card {
-  padding: 2em;
-}
+
 
 .app{
   padding-top: 1rem;
@@ -28,7 +26,7 @@ body{
     }
   }
   @media (min-width:1280px){
-    padding: 0 5rem;
+
     &__container{
       display: flex;
       flex-direction: column;
@@ -48,8 +46,14 @@ body{
       width: 100%;
       display: flex;
       justify-content: center;
+      background-color: black;
+      position: relative;
+      padding: 0 10rem;
+      overflow: hidden;
+      box-sizing: border-box;
     }
     &__content-section{
+      
       display: flex;
       gap: 2rem;
       
