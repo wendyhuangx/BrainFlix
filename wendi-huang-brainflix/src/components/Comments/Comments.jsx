@@ -14,9 +14,11 @@ function Comments({ comments = [] }) {
                     <div class="comment__profile">
                         <img src={profileImage} alt="Profile" class="profile-image"/>
                     </div>
-                    <div class="comment-fields">
-                        <label for="comment">JOIN THE CONVERSATION</label>
-                        <textarea id="comment" placeholder="Add a new comment" required></textarea>
+                    <div className="comments__comment-fields">
+                        <div className='comments__comment-form-header'>
+                            <label for="comment">JOIN THE CONVERSATION</label>
+                            <textarea id="comment" placeholder="Add a new comment" required></textarea>
+                        </div>
                         <button className="comments__comment-button">
                             <img src={commentImage} alt='Comment Icon' className='comments__comment-icon'/>
                             <span className='comments__comment-text'>COMMENT</span>

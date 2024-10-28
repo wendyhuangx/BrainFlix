@@ -60,6 +60,58 @@
     &__comments__name{
       font-weight: bold;
     }
+    &__comment-fields{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        gap:0.5rem;
+    }
+    &__comment-button{
+        background-color: #0095ff;
+        color: white;
+        font-size: 1.5rem;
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.5rem;
+        width:100%;
+        display:flex;
+        align-items: center;
+        cursor: pointer;
+    }
+    @media (min-width: 768px){
+        &__comment-fields{
+            flex-direction: row;
+        }
+        &__comment-button{
+            width: 50%;
+            padding: 0.25rem 1.5rem;
+            height: 4rem;
+            margin-top: 2rem;
+        }
+    
+    }
+    @media (min-width: 1280px){
+        &__comment-button{
+            align-items: bottom;
+            float: right;
+            width: 30%;
+            height: 3.2rem;
+            padding: 0rem 1.5rem;
+            margin-top: 1.5rem;
+        }
+        form input, form textarea{
+            padding: 0.5em 10em 0.5em 0.5em;
+            width: 100%;
+            border: 1px solid rgba(50,50,50,0.5);
+            box-sizing: border-box;
+            background-color: #f9f9f9;
+            color: black;
+            border-radius: 0.5rem;
+            height: 3rem;
+        
+        }
+    }
+
   }
 form{
     display: flex;
@@ -75,6 +127,7 @@ form label{
 }
 form input, form textarea{
     padding: 0.5em;
+    width: 100%;
     border: 1px solid rgba(50,50,50,0.5);
     box-sizing: border-box;
     background-color: #f9f9f9;
@@ -83,17 +136,7 @@ form input, form textarea{
     height: 5rem;
 
 }
-form button{
-    background-color: #0095ff;
-    color: white;
-    font-size: 1.5rem;
-    padding: 0.75rem 1.5rem;
-    border-radius: 0.5rem;
-    width:100%;
-    display:flex;
-    align-items: center;
-    cursor: pointer;
-}
+
 .input__container{
     display: flex;
     align-items: flex-start;
@@ -109,11 +152,4 @@ form button{
     object-fit: cover;
     width: 40px;
     height:40px;
-}
-.comment-fields{
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    gap:0.5rem;
 }

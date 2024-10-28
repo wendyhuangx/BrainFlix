@@ -18,11 +18,15 @@ function App() { /* This line defines a function called App, which is the main c
   return (
     <div className='app'>
       <Header />
-      <div className='app__main'>
-        <VideoPlayer video={currentVideo} />
-        <Comments comments={currentVideo.comments || []} />
-        <VideoList  videos={videoData.filter(video => video.id !== currentVideo.id)}
+      <div className='app__container'>
+        <div className='app__main'>
+          <VideoPlayer video={currentVideo} />
+          <Comments comments={currentVideo.comments || []} />
+        </div>
+        <div className='app__main-right'>
+          <VideoList  videos={videoData.filter(video => video.id !== currentVideo.id)}
                 onVideoSelect={handleVideoSelect} />
+        </div>
       </div>
 
     </div>

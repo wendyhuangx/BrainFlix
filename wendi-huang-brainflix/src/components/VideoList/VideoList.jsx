@@ -5,6 +5,7 @@ import './VideoList.scss';
 function VideoList({ videos, onVideoSelect }) {
     return (
         <div className="video-list">
+            <h3 className='video-list__heading'>NEXT VIDEOS</h3>
             {videos.map((video) => (
                 <div
                     key={video.id}
