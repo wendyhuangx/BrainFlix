@@ -9,7 +9,7 @@ import Description from './components/Description/Description';
 
 function App() { /* This line defines a function called App, which is the main component of the application. Components are like building blocks for your app.*/
   const [currentVideo, setCurrentVideo] = useState(videoData[0] || {});
-  console.log("Current Video:", currentVideo); 
+
 
   const handleVideoSelect = (videoId) => {
     const selectedVideo = videoData.find(video => video.id ===  videoId);

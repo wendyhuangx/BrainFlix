@@ -1,12 +1,15 @@
+@import 'styles/partials/colours.scss';
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
 
   text-align: center;
+  
 }
 body{
   background-color: white;
-  color: black;
+  color: $primary-colour;
 }
 
 .logo {
@@ -46,7 +49,7 @@ body{
       width: 100%;
       display: flex;
       justify-content: center;
-      background-color: black;
+      background-color: $primary-colour;
       position: relative;
       padding: 0 10rem;
       overflow: hidden;

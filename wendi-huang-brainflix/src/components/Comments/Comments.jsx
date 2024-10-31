@@ -7,9 +7,9 @@ import commentImage from '../../assets/Icons/add_comment.svg';
 function Comments({ comments = [] }) {
     return (
         <section className="comments">
-            <h2 className="comments__title">{comments.length} Comments</h2>
+            <h2 className="comments__title">{comments.length} Comments</h2> {/* count number of comments */}
             
-            <form id="comment-form">
+            <form id="comment-form"> {/*starts a form where users can submit their comments. The id helps identify this form in styles or scripts.*/}
                 <div class="input__container">
                     <div class="comment__profile">
                         <img src={profileImage} alt="Profile" class="profile-image"/>

@@ -16,14 +16,16 @@ function Header(){
                 <div className='header__search-container'>
                     <img src={searchIcon} alt='search icon' className='header__search-icon'/>
                     <input type="text" className="header__search" placeholder="Search" />
-
                     <img src={profileImage} alt='profile image' className='header__profile-image'/>
+
+                    
 
                 </div>
                 <button className="header__upload">
                     <img src={uploadIcon} alt='Upload Icon' className='header__upload-icon'/>
                     <span className='header__upload-text'>UPLOAD</span>
                 </button>
+                <img src={profileImage} alt='profile image' className='header__profile-image2'/>
             </div>
       </header>
     );
