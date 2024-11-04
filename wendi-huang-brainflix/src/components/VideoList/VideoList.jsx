@@ -1,14 +1,15 @@
 // src/components/VideoList/VideoList.jsx
 import React from 'react';
 import './VideoList.scss';
+import { Link } from 'react-router-dom';
 
 function VideoList({ videos, onVideoSelect }) {
     return (
         <div className="video-list">
             <h3 className='video-list__heading'>NEXT VIDEOS</h3>
             {videos.map((video) => (
-                <div
-                    key={video.id}
+                <Link
+                    key={video.id} to={`/videos/${video.id}`}
                     className="video-list__item"
                     onClick={() => onVideoSelect(video.id)}
                 >
@@ -17,7 +18,7 @@ function VideoList({ videos, onVideoSelect }) {
                         <h4 className="video-list__title">{video.title}</h4>
                         <p className="video-list__channel">{video.channel}</p>
                     </div>
-                </div>
+                </Link>
             ))}
         </div>
     );
