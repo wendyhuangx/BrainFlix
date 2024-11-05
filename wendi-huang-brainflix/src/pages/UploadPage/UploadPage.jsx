@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import Header from "../../components/Header/Header";
 
 function UploadPage(){
     const navigate = useNavigate();
@@ -11,6 +12,7 @@ function UploadPage(){
 
     return (
         <div className="upload-page">
+            <Header />
             <h1>Upload Video</h1>
             <form onSubmit={handleSubmit}>
                 <label>VIDEO THUMBNAIL</label>
