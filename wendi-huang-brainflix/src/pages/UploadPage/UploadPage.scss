@@ -24,6 +24,8 @@
     }
     &__preview-image{
         width: 100%;
+        padding-bottom: 1rem;
+
     }
     &__title{
         text-align: left;
@@ -35,8 +37,7 @@
         color: #0095ff;
     }
     &__labels{
-        margin-bottom: 0;
-        padding-bottom: 0;
+        padding-bottom: 0.5rem;
     }
     &__title-line{
         display: none;
@@ -46,10 +47,14 @@
     }
     &__input-container{
         text-align: left;
+        gap: 1rem;
     }
     &__preview-container{
         display: flex;
         flex-direction: column;
+    }
+    &__input-box{
+        padding-bottom: 1rem;
     }
     
 
