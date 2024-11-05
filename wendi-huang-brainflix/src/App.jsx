@@ -1,44 +1,18 @@
-import { useState } from 'react';
-import './App.scss';
-import videoData from './assets/Data/video-details.json';
-import Header from './components/Header/Header';
-import VideoList from './components/VideoList/VideoList';
-import VideoPlayer from './components/VideoPlayer/VideoPlayer';
-import Comments from './components/Comments/Comments';
-import Description from './components/Description/Description';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage/HomePage";
+import UploadPage from "./pages/UploadPage/UploadPage";
 
-function App() { /* This line defines a function called App, which is the main component of the application. Components are like building blocks for your app.*/
-  const [currentVideo, setCurrentVideo] = useState(videoData[0] || {});
-  console.log("Current Video:", currentVideo); 
-
-  const handleVideoSelect = (videoId) => {
-    const selectedVideo = videoData.find(video => video.id ===  videoId);
-    setCurrentVideo(selectedVideo);
-  };
-
+function App (){
   return (
-    <div className='app'>
-      <Header />
-      <div className='app__container'>
-        <div className='app__video'>
-          <VideoPlayer video={currentVideo} />
-        </div>
+    <Router>
+      <Routes>
+        <Route path = '/' element={<HomePage />} />
+        <Route path = '/videos/:videoId' element={<HomePage />} />
+        <Route path = '/upload' element={<UploadPage />} />
 
-        <div className='app__content-section'>
-          <div className='app__video-description'>
-            <Description video={currentVideo} />
-            <Comments comments={currentVideo.comments || []} />
-          </div>
-          <hr></hr>
-        
-        <div className='app__main-right'>
-          <VideoList  videos={videoData.filter(video => video.id !== currentVideo.id)}
-                onVideoSelect={handleVideoSelect} />
-        </div>
-        </div>
-      </div>
-
-    </div>
+      </Routes>
+    </Router>
   )
 }
 
