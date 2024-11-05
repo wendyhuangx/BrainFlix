@@ -1,0 +1,110 @@
+
+.upload-page{
+    padding: 0 1rem;
+    margin: 0;
+    &__publish {
+        display:flex;
+        align-items: center;
+        background-color: #0095ff;
+        width: 100%;
+        color: white;
+        padding: 0.5rem 1rem;
+        border: none;
+        cursor: pointer;
+        margin-bottom: 1rem;
+    }
+    &__publish-icon{
+        width: 10%;
+        height: auto;
+    }
+    &__publish-text{
+        flex-grow: 1;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    &__preview-image{
+        width: 100%;
+    }
+    &__title{
+        text-align: left;
+        font-size: 2.5rem;
+        margin-bottom: 0;
+    }
+    &__cancel{
+        background-color: transparent;
+        color: #0095ff;
+    }
+    &__labels{
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    &__title-line{
+        display: none;
+    }
+    &__publish-big{
+        display: none;
+    }
+    &__input-container{
+        text-align: left;
+    }
+    &__preview-container{
+        display: flex;
+        flex-direction: column;
+    }
+    
+
+    
+    @media (min-width:768px){
+        padding: 0rem 3rem;
+        &__title-line{
+            display: block;
+            width: 100%;
+        }
+        &__title{
+            padding-bottom: 1rem;
+        }
+        &__preview-image{
+            width: 50%;
+        }
+        &__button-container{
+            display: flex;
+            justify-content: flex-end;
+            gap: 2rem;
+        }
+        &__publish{
+            display: none;
+        }
+        &__publish-big {
+            display:flex;
+            align-items: center;
+            background-color: #0095ff;
+            color: white;
+            padding: 1rem 1rem;
+            border: none;
+            cursor: pointer;
+            margin-bottom: 0;
+            width: 20%;
+        }
+        &__cancel{
+            width: 20%;
+        }
+        &__publish-text{
+            font: 1rem;
+        }
+        &__publish-icon{
+            width: 15%;
+            height: auto;
+        }
+      }
+      @media (min-width:1280px){
+        &__form-container{
+            display: flex;
+        }
+        &__input-container{
+            width: 100%;
+        }
+        &__title{
+            padding: 2rem 0;
+        }
+      }
+}
