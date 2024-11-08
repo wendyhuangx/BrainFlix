@@ -16,6 +16,7 @@ function UploadPage(){
         const newVideo = {
             title: title,
             description: description,
+            image: UploadPreview,
         };
         postVideos(newVideo);
 
