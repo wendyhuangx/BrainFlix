@@ -1,18 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Header from "../../components/Header/Header";
 import publishIcon from '../../assets/Icons/publish.svg';
 import './UploadPage.scss';
 import UploadPreview from '../../assets/Images/Upload-video-preview.jpg';
+import { postVideos } from "../../api";
 
 
 function UploadPage(){
     const navigate = useNavigate();
+    const [title, setTitle] =useState("");
+    const [description, setDescription] = useState("");
     const handleSubmit = (event) =>{
         event.preventDefault();
+        const newVideo = {
+            title: title,
+            description: description,
+            image: UploadPreview,
+        };
+        postVideos(newVideo);
+
         alert('Upload Complete');
         navigate('/');
     };
+    const handleCancelButton = () => {
+        navigate('/');
+    }
 
     return (
         <div className="full-page">
@@ -29,9 +42,9 @@ function UploadPage(){
                         </div>
                         <div className="upload-page__input-container">
                             <label className="upload-page__labels">TITLE YOUR VIDEO</label>
-                            <input type="text" name="title" placeholder="Add a title to your video" required />
+                            <input type="text" name="title" value={title} onChange= {(e) => setTitle(e.target.value)} placeholder="Add a title to your video" required />
                             <label className="upload-page__labels">ADD A VIDEO DESCRIPTION</label>
-                            <textarea name="description" placeholder="Add a description to your video" required></textarea>
+                            <textarea name="description" value={description} onChange= {(e) => setDescription(e.target.value)} placeholder="Add a description to your video" required></textarea>
                         </div>
                     </div>
                     <hr className="upload-page__title-line"></hr>
@@ -40,7 +53,7 @@ function UploadPage(){
                             <img src={publishIcon} alt='Upload Icon' className='upload-page__publish-icon'/>
                             <span className='upload-page__publish-text'>PUBLISH</span>
                         </button>
-                        <button className="upload-page__cancel">CANCEL</button>
+                        <button className="upload-page__cancel" onClick={handleCancelButton}>CANCEL</button>
                         <button className="upload-page__publish-big">
                             <img src={publishIcon} alt='Upload Icon' className='upload-page__publish-icon'/>
                             <span className='upload-page__publish-text'>PUBLISH</span>

@@ -1,7 +1,5 @@
 import React from 'react';
 import './VideoPlayer.scss';
-import likeIcon from '../../assets/Icons/likes.svg';
-import viewIcon from '../../assets/Icons/views.svg';
 
 /*import "../../App.jsx";*/
 
