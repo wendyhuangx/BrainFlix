@@ -23,6 +23,9 @@ function UploadPage(){
         alert('Upload Complete');
         navigate('/');
     };
+    const handleCancelButton = () => {
+        navigate('/');
+    }
 
     return (
         <div className="full-page">
@@ -50,7 +53,7 @@ function UploadPage(){
                             <img src={publishIcon} alt='Upload Icon' className='upload-page__publish-icon'/>
                             <span className='upload-page__publish-text'>PUBLISH</span>
                         </button>
-                        <button className="upload-page__cancel">CANCEL</button>
+                        <button className="upload-page__cancel" onClick={handleCancelButton}>CANCEL</button>
                         <button className="upload-page__publish-big">
                             <img src={publishIcon} alt='Upload Icon' className='upload-page__publish-icon'/>
                             <span className='upload-page__publish-text'>PUBLISH</span>
